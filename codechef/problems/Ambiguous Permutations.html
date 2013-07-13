@@ -1,0 +1,52 @@
+<div style='width:800px;margin:50px'><div class="content">
+<h3>All submissions for this problem are available.</h3>
+<p>
+Some programming contest problems are really tricky: not only do they<br>
+require a different output format from what you might have expected, but<br>
+also the sample output does not show the difference. For an example,<br>
+let us look at permutations.<br>
+A <b>permutation</b> of the integers <i>1</i> to <i>n</i> is an<br>
+ordering of<br>
+these integers. So the natural way to represent a permutation is<br>
+to list the integers in this order. With <i>n = 5</i>, a<br>
+permutation might look like 2, 3, 4, 5, 1. <br>
+However, there is another possibility of representing a permutation:<br>
+You create a list of numbers where the <i>i</i>-th number is the<br>
+position of the integer <i>i</i> in the permutation.<br>
+Let us call this second<br>
+possibility an <b>inverse permutation</b>. The inverse permutation<br>
+for the sequence above is 5, 1, 2, 3, 4.<br><br>
+An <b>ambiguous permutation</b> is a permutation which cannot be<br>
+distinguished from its inverse permutation. The permutation 1, 4, 3, 2<br>
+for example is ambiguous, because its inverse permutation is the same.<br>
+To get rid of such annoying sample test cases, you have to write a<br>
+program which detects if a given permutation is ambiguous or not.
+</p>
+<h3>Input Specification</h3>
+<p>The input contains several test cases.<br>
+The first line of each test case contains an integer <i>n</i><br>
+(<i>1 ≤ n ≤ 100000</i>).<br>
+Then a permutation of the integers <i>1</i> to <i>n</i> follows<br>
+in the next line. There is exactly one space character<br>
+between consecutive integers.<br>
+You can assume that every integer between <i>1</i> and <i>n</i><br>
+appears exactly once in the permutation.<br><br>
+The last test case is followed by a zero.
+</p>
+<h3>Output Specification</h3>
+<p>For each test case output whether the permutation is ambiguous or not.<br>
+Adhere to the format shown in the sample output.
+</p>
+<h3>Sample Input</h3>
+<pre>4
+1 4 3 2
+5
+2 3 4 5 1
+1
+1
+0
+</pre><h3>Sample Output</h3>
+<pre>ambiguous
+not ambiguous
+ambiguous
+</pre>    </div></div>

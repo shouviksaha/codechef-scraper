@@ -1,0 +1,60 @@
+<div style='width:800px;margin:50px'><div class="content">
+<h3>All submissions for this problem are available.</h3>
+<p align="justify">
+Some of the secret doors contain a very interesting word puzzle. The team of<br>
+archaeologists has to solve it to open  that doors. Because there is no<br>
+other way to open the doors, the puzzle is very important for us.</p>
+<p align="justify">
+There is a large number of magnetic plates on every door. Every plate has one<br>
+word written on it. The plates must be arranged into a sequence in such a way that<br>
+every word begins with the same letter as the previous<br>
+word ends. For example, the word ``ac<u>m</u>'' can be followed by the word<br>
+``<u>m</u>otorola''. Your<br>
+task is to write a computer program that will read the list of words and<br>
+determine whether it is possible to arrange all of the plates in<br>
+a sequence (according to the given rule) and consequently to open the door.</p>
+<p></p><h3>Input</h3>
+
+<p align="justify">The input consists of T test cases. The number of them (T, equal to about 500) is given on<br>
+the first line of the input file.<br>
+Each test case begins with a line containing a single integer number N that indicates the number of plates<br>
+(1 &lt;= N &lt;= 100000). Then exactly Nlines follow,<br>
+each containing a single word. Each word contains at least two<br>
+and at most 1000 lowercase characters, that means only letters '<code>a</code>'<br>
+through '<code>z</code>' will appear in the word. The same word may appear several<br>
+times in the list.</p>
+<p></p><h3>Output</h3>
+
+<p align="justify">Your program has to determine whether it is possible to arrange all the plates in<br>
+a sequence such that the first letter of each word is equal to the last<br>
+letter of the previous word. All the plates from the list must be used, each<br>
+exactly once. The words mentioned several times must be<br>
+used that number of times.</p>
+<p align="justify">
+If there exists such an ordering of plates, your program should print<br>
+the sentence "<code>Ordering is possible.</code>". Otherwise, output<br>
+the sentence "<code>The door cannot be opened.</code>".</p>
+<p></p><h3>Example</h3>
+<pre>
+Sample input:
+
+3
+2
+directi
+codechef
+3
+skenzo
+logicboxes
+orderbox
+2
+ok
+ok
+
+
+Sample output:
+
+The door cannot be opened.
+Ordering is possible.
+The door cannot be opened.
+</pre>
+<b>Warning: large Input/Output data, be careful with certain languages</b>    </div></div>

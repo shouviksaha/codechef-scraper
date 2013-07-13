@@ -1,0 +1,18 @@
+from scrapy.spider import BaseSpider
+from scrapy.selector import HtmlXPathSelector
+from scrapy.http.request import Request
+from codechef.codechef.items import Problem
+from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+
+class CodechefSpider(BaseSpider):
+	name = "codechef"
+	allowed_domains = ["codechef.com"]
+	start_urls = ["http://www.codechef.com/problems/easy/","http://www.codechef.com/problems/medium/","http://www.codechef.com/problems/hard/","http://www.codechef.com/problems/challenege/"]
+	
+	rules = (Rule(SgmlLinkExtractor(allow=('/problems/[A-Z]+',), callback='parse_item', follow=False)))
+
+	def parse_item(self, response):
+		hxs = HtmlXPathSelector(response)
+		item = Problem()
+		item['title'] = hxs.select("//table[@class='pagetitle-prob']/tbody/tr/td/h1/text()").extract()
+		item['content'] = hxs.select("//div[@class='primary-colum-width-left']/div//div[@class='content']/text()").extract()
