@@ -2,5 +2,7 @@ from scrapy.item import Item, Field
 
 class Problem(Item):
     title = Field()
-    link = Field()
     content = Field()
+
+class Soultion(Item):
+    code = Field()
